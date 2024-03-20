@@ -61,6 +61,8 @@ Validation:
 */
 
 // ********RoostGPT********
+package com.baeldung.model;
+
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -69,32 +71,32 @@ import com.baeldung.model.Book;
 
 public class BookSetIdTest {
 
-    private Book book;
+  private Book book;
 
-    @Before
-    public void setUp() {
-        book = new Book();
-    }
+  @Before
+  public void setUp() {
+    book = new Book();
+  }
 
-    @Test
-    public void testValidIdAssignment() {
-        Long validId = 123L;
-        book.setId(validId);
-        assertEquals(validId, book.getId());
-    }
+  @Test
+  public void testValidIdAssignment() {
+    Long validId = 123L;
+    book.setId(validId);
+    assertEquals(validId, book.getId());
+  }
 
-    @Test
-    public void testNullIdAssignment() {
-        book.setId(null);
-        assertNull(book.getId());
-    }
+  @Test
+  public void testNullIdAssignment() {
+    book.setId(null);
+    assertNull(book.getId());
+  }
 
-    @Test
-    public void testIdReassignment() {
-        Long oldId = 123L;
-        Long newId = 456L;
-        book.setId(oldId);
-        book.setId(newId);
-        assertEquals(newId, book.getId());
-    }
+  @Test
+  public void testIdReassignment() {
+    Long oldId = 123L;
+    Long newId = 456L;
+    book.setId(oldId);
+    book.setId(newId);
+    assertEquals(newId, book.getId());
+  }
 }

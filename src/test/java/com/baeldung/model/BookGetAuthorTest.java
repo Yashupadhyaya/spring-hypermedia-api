@@ -72,33 +72,33 @@ import org.junit.Test;
 
 public class BookGetAuthorTest {
 
-    private Book book;
+  private Book book;
 
-    @Before
-    public void setUp() {
-        book = new Book();
-    }
+  @Before
+  public void setUp() {
+    book = new Book();
+  }
 
-    @Test
-    public void validateGetAuthorReturnValue() {
-        String expectedAuthor = "John Doe";
-        book.setAuthor(expectedAuthor);
-        
-        String actualAuthor = book.getAuthor();
-        
-        Assert.assertEquals("The expected author does not match the actual author", expectedAuthor, actualAuthor);
-    }
+  @Test
+  public void validateGetAuthorReturnValue() {
+    String expectedAuthor = "John Doe";
+    book.setAuthor(expectedAuthor);
 
-    @Test
-    public void validateGetAuthorReturnType() {
-        String expectedAuthor = "John Doe";
-        book.setAuthor(expectedAuthor);
-        
-        Assert.assertTrue("The return type of getAuthor is not String", book.getAuthor() instanceof String);
-    }
+    String actualAuthor = book.getAuthor();
 
-    @Test
-    public void validateGetAuthorWhenNull() {
-        Assert.assertNull("The author is not null", book.getAuthor());
-    }
+    Assert.assertEquals("The expected author does not match the actual author", expectedAuthor, actualAuthor);
+  }
+
+  @Test
+  public void validateGetAuthorReturnType() {
+    String expectedAuthor = "John Doe";
+    book.setAuthor(expectedAuthor);
+
+    Assert.assertTrue("The return type of getAuthor is not String", book.getAuthor() instanceof String);
+  }
+
+  @Test
+  public void validateGetAuthorWhenNull() {
+    Assert.assertNull("The author is not null", book.getAuthor());
+  }
 }

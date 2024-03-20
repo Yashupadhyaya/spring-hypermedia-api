@@ -103,51 +103,51 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class BookEqualsTest {
-    
-    @Test
-    public void equalsSameObject() {
-        Book book1 = new Book("author1", "title1", "isbn1");
-        assertTrue(book1.equals(book1));
-    }
 
-    @Test
-    public void equalsNullObject() {
-        Book book1 = new Book("author1", "title1", "isbn1");
-        assertFalse(book1.equals(null));
-    }
+  @Test
+  public void equalsSameObject() {
+    Book book1 = new Book("author1", "title1", "isbn1");
+    assertTrue(book1.equals(book1));
+  }
 
-    @Test
-    public void equalsDifferentClass() {
-        Book book1 = new Book("author1", "title1", "isbn1");
-        String notABook = "I am not a book";
-        assertFalse(book1.equals(notABook));
-    }
+  @Test
+  public void equalsNullObject() {
+    Book book1 = new Book("author1", "title1", "isbn1");
+    assertFalse(book1.equals(null));
+  }
 
-    @Test
-    public void equalsDifferentAuthors() {
-        Book book1 = new Book("author1", "title1", "isbn1");
-        Book book2 = new Book("author2", "title1", "isbn1");
-        assertFalse(book1.equals(book2));
-    }
+  @Test
+  public void equalsDifferentClass() {
+    Book book1 = new Book("author1", "title1", "isbn1");
+    String notABook = "I am not a book";
+    assertFalse(book1.equals(notABook));
+  }
 
-    @Test
-    public void equalsDifferentIsbns() {
-        Book book1 = new Book("author1", "title1", "isbn1");
-        Book book2 = new Book("author1", "title1", "isbn2");
-        assertFalse(book1.equals(book2));
-    }
+  @Test
+  public void equalsDifferentAuthors() {
+    Book book1 = new Book("author1", "1", "isbn1");
+    Book book2 = new Book("author2", "title1", "isbn1");
+    assertFalse(book1.equals(book2));
+  }
 
-    @Test
-    public void equalsDifferentTitles() {
-        Book book1 = new Book("author1", "title1", "isbn1");
-        Book book2 = new Book("author1", "title2", "isbn1");
-        assertFalse(book1.equals(book2));
-    }
+  @Test
+  public void equalsDifferentIsbns() {
+    Book book1 = new Book("author1", "title1", "isbn1");
+    Book book2 = new Book("author1", "title1", "isbn2");
+    assertFalse(book1.equals(book2));
+  }
 
-    @Test
-    public void equalsSameBook() {
-        Book book1 = new Book("author1", "title1", "isbn1");
-        Book book2 = new Book("author1", "title1", "isbn1");
-        assertTrue(book1.equals(book2));
-    }
+  @Test
+  public void equalsDifferentTitles() {
+    Book book1 = new Book("author1", "title1", "isbn1");
+    Book book2 = new Book("author1", "title2", "isbn1");
+    assertFalse(book1.equals(book2));
+  }
+
+  @Test
+  public void equalsSameBook() {
+    Book book1 = new Book("author1", "title1", "isbn1");
+    Book book2 = new Book("author1", "title1", "isbn1");
+    assertTrue(book1.equals(book2));
+  }
 }

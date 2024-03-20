@@ -69,41 +69,41 @@ import static org.junit.Assert.assertNull;
 
 public class CartGetBooksTest {
 
-    private Cart cart;
-    private Book book1;
-    private Book book2;
+  private Cart cart;
+  private Book book1;
+  private Book book2;
 
-    @Before
-    public void setUp() {
-        cart = new Cart();
-        book1 = new Book("Author1", "Title1", "ISBN1");
-        book2 = new Book("Author2", "Title2", "ISBN2");
-    }
+  @Before
+  public void setUp() {
+    cart = new Cart();
+    book1 = new Book("Author1", "Title1", "ISBN1");
+    book2 = new Book("Author2", "Title2", "ISBN2");
+  }
 
-    @Test
-    public void testGetBooksSuccessfully() {
-        List<Book> expectedBooks = new ArrayList<>();
-        expectedBooks.add(book1);
-        expectedBooks.add(book2);
-        cart.add(book1);
-        cart.add(book2);
-        List<Book> actualBooks = cart.getBooks();
-        assertEquals(expectedBooks, actualBooks);
-    }
+  @Test
+  public void testGetBooksSuccessfully() {
+    List<Book> expectedBooks = new ArrayList<>();
+    expectedBooks.add(book1);
+    expectedBooks.add(book2);
+    cart.add(book1);
+    cart.add(book2);
+    List<Book> actualBooks = cart.getBooks();
+    assertEquals(expectedBooks, actualBooks);
+  }
 
-    @Test
-    public void testGetBooksWhenListIsEmpty() {
-        List<Book> expectedBooks = new ArrayList<>();
-        List<Book> actualBooks = cart.getBooks();
-        assertEquals(expectedBooks, actualBooks);
-    }
+  @Test
+  public void testGetBooksWhenListIsEmpty() {
+    List<Book> expectedBooks = new ArrayList<>();
+    List<Book> actualBooks = cart.getBooks();
+    assertEquals(expectedBooks, actualBooks);
+  }
 
-    // Commenting out the test case as there is no setBooks method in Cart class
-    // @Test
-    // public void testGetBooksWhenListIsNull() {
-    //     cart = new Cart();
-    //     cart.setBooks(null);
-    //     List<Book> actualBooks = cart.getBooks();
-    //     assertNull(actualBooks);
-    // }
+  // Commenting out the test case as there is no setBooks method in Cart class
+  // @Test
+  // public void testGetBooksWhenListIsNull() {
+  // cart = new Cart();
+  // cart.setBooks(null);
+  // List<Book> actualBooks = cart.getBooks();
+  // assertNull(actualBooks);
+  // }
 }

@@ -59,49 +59,49 @@ import static org.junit.Assert.*;
 
 public class BookBook863Test {
 
-    private Book book;
+  private Book book;
 
-    @Before
-    public void setUp() {
-        book = new Book();
-    }
+  @Before
+  public void setUp() {
+    book = new Book();
+  }
 
-    @Test
-    public void validateBookConstructorWithValidParameters() {
-        String author = "John Doe";
-        String title = "Sample Book";
-        String isbn = "123-456-789";
+  @Test
+  public void validateBookConstructorWithValidParameters() {
+    String author = "John Doe";
+    String title = "Sample Book";
+    String isbn = "123-456-789";
 
-        book = new Book(author, title, isbn);
+    book = new Book(author, title, isbn);
 
-        assertEquals(author, book.getAuthor());
-        assertEquals(title, book.getTitle());
-        assertEquals(isbn, book.getIsbn());
-    }
+    assertEquals(author, book.getAuthor());
+    assertEquals(title, book.getTitle());
+    assertEquals(isbn, book.getIsbn());
+  }
 
-    @Test
-    public void validateBookConstructorWithNullParameters() {
-        String author = null;
-        String title = null;
-        String isbn = null;
+  @Test
+  public void validateBookConstructorWithNullParameters() {
+    String author = null;
+    String title = null;
+    String isbn = null;
 
-        book = new Book(author, title, isbn);
+    book = new Book(author, title, isbn);
 
-        assertNull(book.getAuthor());
-        assertNull(book.getTitle());
-        assertNull(book.getIsbn());
-    }
+    assertNull(book.getAuthor());
+    assertNull(book.getTitle());
+    assertNull(book.getIsbn());
+  }
 
-    @Test
-    public void validateBookConstructorWithEmptyStrings() {
-        String author = "";
-        String title = "";
-        String isbn = "";
+  @Test
+  public void validateBookConstructorWithEmptyStrings() {
+    String author = "";
+    String title = "";
+    String isbn = "";
 
-        book = new Book(author, title, isbn);
+    book = new Book(author, title, isbn);
 
-        assertEquals("", book.getAuthor());
-        assertEquals("", book.getTitle());
-        assertEquals("", book.getIsbn());
-    }
+    assertEquals("", book.getAuthor());
+    assertEquals("", book.getTitle());
+    assertEquals("", book.getIsbn());
+  }
 }
